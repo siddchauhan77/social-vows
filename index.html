@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Vows | Wedding Content Creator — Houston · Dallas · Austin · California</title>
-  <meta name="description" content="Wake up the morning after your wedding with hundreds of videos and edited Reels in your camera roll. Social Vows delivers your wedding content within 24 hours." />
+  <title>Social Vows | Luxury Event Content Creator — Based in TX &amp; CA · Anywhere on request</title>
+  <meta name="description" content="Luxury event content creators for weddings, galas, corporate events, and brand launches. Based in Texas and California, available anywhere. Wake up the morning after with hundreds of videos and edited Reels in your camera roll. 24-hour delivery." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -226,9 +226,127 @@
       h1{font-size:3rem}
       .hero{padding-top:4rem}
     }
+
+    /* ════════ START HERE FAB + MODAL ════════ */
+    .start-fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:80;background:var(--color-primary);color:#fff;border-radius:var(--radius-full);padding:1rem 1.4rem;font-weight:800;font-size:var(--text-sm);letter-spacing:.03em;box-shadow:var(--shadow-lg),0 0 0 0 color-mix(in srgb,var(--color-primary) 50%,transparent);display:inline-flex;align-items:center;gap:.55rem;cursor:pointer;border:none;animation:fab-pulse 2.4s ease-in-out infinite;transition:transform .2s,box-shadow .2s}
+    .start-fab:hover{transform:scale(1.05);box-shadow:var(--shadow-lg)}
+    .start-fab svg{width:18px;height:18px}
+    @keyframes fab-pulse{0%,100%{box-shadow:var(--shadow-lg),0 0 0 0 color-mix(in srgb,var(--color-primary) 50%,transparent)}50%{box-shadow:var(--shadow-lg),0 0 0 14px color-mix(in srgb,var(--color-primary) 0%,transparent)}}
+    @media(max-width:640px){.start-fab{padding:.85rem 1.1rem;font-size:var(--text-xs);bottom:1rem;right:1rem}}
+
+    .modal-overlay{position:fixed;inset:0;z-index:100;background:color-mix(in srgb,var(--color-text) 60%,transparent);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:1rem;animation:fade-in .25s ease-out}
+    .modal-overlay.open{display:flex}
+    @keyframes fade-in{from{opacity:0}to{opacity:1}}
+    @keyframes slide-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .modal-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);max-width:560px;width:100%;max-height:90vh;overflow-y:auto;padding:clamp(1.5rem,4vw,2.5rem);position:relative;animation:slide-up .3s ease-out;box-shadow:var(--shadow-lg)}
+    .modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:var(--radius-full);background:var(--color-surface-offset);display:grid;place-items:center;cursor:pointer;border:none;color:var(--color-text-muted)}
+    .modal-close:hover{background:var(--color-primary-highlight);color:var(--color-primary)}
+    .modal-card h2{font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:var(--space-2);font-weight:400}
+    .modal-card .eyebrow{margin-bottom:var(--space-4)}
+    .start-grid{display:grid;gap:var(--space-4);margin:var(--space-5) 0}
+    .start-row{padding:var(--space-3) var(--space-4);background:var(--color-surface-2);border:1px solid color-mix(in srgb,var(--color-text) 6%,transparent);border-radius:var(--radius-md);display:flex;gap:var(--space-4);align-items:flex-start}
+    .start-row-icon{font-size:1.5rem;flex-shrink:0;line-height:1}
+    .start-row-label{font-size:var(--text-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary);margin-bottom:.2rem}
+    .start-row-body{font-size:var(--text-sm);color:var(--color-text-muted);margin:0}
+    .start-row-body strong{color:var(--color-text)}
+    .modal-actions{display:flex;gap:var(--space-3);margin-top:var(--space-5);flex-wrap:wrap}
+    .modal-actions a{flex:1;min-width:140px;justify-content:center}
+
+    /* ════════ INQUIRY FORM SECTION ════════ */
+    #inquire{background:var(--color-surface);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);scroll-margin-top:6rem}
+    .form-wrap{max-width:680px;margin:0 auto}
+    .form-head{text-align:center;margin-bottom:var(--space-8)}
+    .form-head h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;margin-bottom:var(--space-3);line-height:1.05;letter-spacing:-.03em}
+    .form-head p{color:var(--color-text-muted);font-size:var(--text-lg);max-width:54ch;margin-inline:auto}
+    .inquiry-form{display:grid;gap:var(--space-4);background:var(--color-surface-2);padding:clamp(1.5rem,4vw,2.5rem);border-radius:var(--radius-xl);border:1px solid var(--color-border);box-shadow:var(--shadow-md)}
+    .form-row{display:grid;gap:var(--space-4)}
+    .form-row.cols-2{grid-template-columns:1fr 1fr}
+    @media(max-width:640px){.form-row.cols-2{grid-template-columns:1fr}}
+    .field label{display:block;font-size:var(--text-xs);font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text);margin-bottom:.45rem}
+    .field label .req{color:var(--color-primary);margin-left:.2rem}
+    .field input,.field select,.field textarea{width:100%;padding:.75rem 1rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);font-family:var(--font-body);font-size:var(--text-sm);color:var(--color-text);transition:border-color .2s,box-shadow .2s;min-height:44px}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--color-primary) 18%,transparent)}
+    .field textarea{min-height:96px;resize:vertical;font-family:var(--font-body)}
+    .field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%238a4b33' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+    .wedding-only{display:none;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+    .wedding-only.show{display:grid}
+    @media(max-width:640px){.wedding-only.show{grid-template-columns:1fr}}
+    .form-submit{margin-top:var(--space-3);background:var(--color-primary);color:#fff;font-weight:700;padding:1rem 1.5rem;border-radius:var(--radius-full);border:none;font-size:var(--text-base);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:var(--shadow-md);transition:background .2s,transform .15s}
+    .form-submit:hover{background:var(--color-primary-hover);transform:translateY(-1px)}
+    .form-meta{font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;margin-top:var(--space-4)}
+    .form-success{display:none;padding:var(--space-5);background:color-mix(in srgb,var(--color-success) 12%,var(--color-surface));border:1px solid color-mix(in srgb,var(--color-success) 30%,transparent);border-radius:var(--radius-lg);text-align:center;color:var(--color-success)}
+    .form-success.show{display:block}
+    .form-success h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:.4rem;color:var(--color-success)}
+    .form-success p{font-size:var(--text-sm);color:var(--color-text-muted)}
   </style>
 </head>
 <body>
+
+  <!-- START HERE FAB (floating button) -->
+  <button class="start-fab" type="button" onclick="openStart()" aria-label="Start here — quick rundown">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    <span>Start Here</span>
+  </button>
+
+  <!-- START HERE MODAL -->
+  <div class="modal-overlay" id="start-modal" role="dialog" aria-labelledby="start-modal-title" aria-modal="true" onclick="if(event.target===this)closeStart()">
+    <div class="modal-card">
+      <button class="modal-close" type="button" onclick="closeStart()" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <span class="eyebrow">Social Vows in 60 seconds</span>
+      <h2 id="start-modal-title">Here's the quick version.</h2>
+      <p style="color:var(--color-text-muted);font-size:var(--text-base);margin-bottom:var(--space-2)">No reading required. Here's what you need to know.</p>
+
+      <div class="start-grid">
+        <div class="start-row">
+          <span class="start-row-icon">📱</span>
+          <div>
+            <div class="start-row-label">What we do</div>
+            <p class="start-row-body">We're <strong>luxury event content creators</strong>. Weddings, galas, corporate launches, brand activations, milestone celebrations. We follow your event with phones, not just cameras. You wake up the morning after with <strong>hundreds of raw clips and edited Reels</strong> already in your camera roll.</p>
+          </div>
+        </div>
+
+        <div class="start-row">
+          <span class="start-row-icon">⏱️</span>
+          <div>
+            <div class="start-row-label">When you get it</div>
+            <p class="start-row-body">Raw clips within <strong>24 hours</strong>. Edited Reels typically within <strong>48 hours</strong>. No 4-month photographer wait.</p>
+          </div>
+        </div>
+
+        <div class="start-row">
+          <span class="start-row-icon">📍</span>
+          <div>
+            <div class="start-row-label">Where we work</div>
+            <p class="start-row-body"><strong>Wherever your event is.</strong> We're based in Texas and California with home-market pricing for both, and we travel anywhere — New York, Miami, Lake Como, Tulum, you name it. Destination quotes built in 24 hours.</p>
+          </div>
+        </div>
+
+        <div class="start-row">
+          <span class="start-row-icon">✨</span>
+          <div>
+            <div class="start-row-label">What we cover</div>
+            <p class="start-row-body">Weddings (including multi-day South Asian: <strong>Mehndi · Sangeet · Haldi · Reception</strong>), galas, corporate events, brand launches, product activations, milestone celebrations, private parties. If the moment matters and the production is high-end, we shoot it.</p>
+          </div>
+        </div>
+
+        <div class="start-row">
+          <span class="start-row-icon">✦</span>
+          <div>
+            <div class="start-row-label">Packages</div>
+            <p class="start-row-body"><strong>Core</strong>, <strong>Cinematic</strong>, and <strong>Paparazzi</strong> tiers. Pricing shown on the packages section, adjusted by market.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a class="ghost-btn" href="#packages" onclick="closeStart()">See packages</a>
+        <a class="primary-btn" href="#inquire" onclick="closeStart()">Inquire now →</a>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top">
@@ -246,13 +364,14 @@
         <a href="#packages">Packages</a>
         <a href="#partners">Planners</a>
         <a href="#travel">Logistics</a>
+        <a href="#inquire">Inquire</a>
       </nav>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
         <a class="ghost-btn" href="#packages">See packages</a>
-        <a class="primary-btn" href="#travel">Check Availability</a>
+        <a class="primary-btn" href="#inquire">Inquire Now</a>
       </div>
     </div>
   </header>
@@ -271,7 +390,7 @@
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="container">
-        <span class="eyebrow">Wedding &amp; Event Content Creator · TX &amp; CA</span>
+        <span class="eyebrow">Luxury Event Content Creator · Based in TX &amp; CA · Available anywhere</span>
         <h1>You're Going to Blink and Your Wedding Will Be Over.</h1>
         <p class="hero-copy">Wake up the morning after with your entire wedding already in your camera roll — hundreds of raw clips, edited Reels, and the getting-ready moments your photographer never captured. Raw content delivered within 24 hours. Edited Reels typically within 48 hours.</p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
@@ -284,7 +403,9 @@
           <span class="loc-pill">Austin, TX</span>
           <span class="loc-pill ca">SF Bay Area, CA</span>
           <span class="loc-pill ca">SoCal, CA</span>
-          <span class="loc-pill">+ Destination</span>
+          <span class="loc-pill">New York</span>
+          <span class="loc-pill">Miami</span>
+          <span class="loc-pill ca">Destination · Anywhere</span>
         </div>
       </div>
     </section>
@@ -420,7 +541,7 @@
               <li>Same-day sneak peek: 3 raw clips within 4 hours of event end</li>
               <li>Private secure cloud link — nothing posted without your permission</li>
             </ul>
-            <a class="ghost-btn" href="#travel" style="width:100%;justify-content:center;margin-top:auto">Select Core →</a>
+            <a class="ghost-btn" href="#inquire" style="width:100%;justify-content:center;margin-top:auto">Select Core →</a>
           </article>
 
           <!-- TIER 2: FEATURED -->
@@ -452,7 +573,7 @@
               <li>Getting-ready morning vertical mini-vlog</li>
               <li>Priority editing — delivered before 10am the next day</li>
             </ul>
-            <a class="primary-btn" href="#travel" style="width:100%;justify-content:center;margin-top:auto">Select Cinematic →</a>
+            <a class="primary-btn" href="#inquire" style="width:100%;justify-content:center;margin-top:auto">Select Cinematic →</a>
           </article>
 
           <!-- TIER 3 -->
@@ -483,7 +604,7 @@
               <li>Priority 12-hour delivery guarantee</li>
               <li>Vendor license for planners &amp; venues</li>
             </ul>
-            <a class="ghost-btn" href="#travel" style="width:100%;justify-content:center;margin-top:auto">Inquire for Paparazzi →</a>
+            <a class="ghost-btn" href="#inquire" style="width:100%;justify-content:center;margin-top:auto">Inquire for Paparazzi →</a>
           </article>
 
         </div>
@@ -501,14 +622,6 @@
       </div>
     </section>
 
-        <!-- GUARANTEE -->
-        <div class="guarantee-bar">
-          <div class="guarantee-icon">🛡️</div>
-          <div>
-            <h4>The "You'll Post It Tomorrow" Guarantee</h4>
-            <p>If your raw-content cloud link isn't in your inbox within 24 hours of your event ending, your next booking is completely on us. No fine print. We guarantee fast delivery because that is literally the whole point of what we do — and we've never missed it.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -596,19 +709,19 @@
       <div class="container logistics-grid">
         <div class="logistics-card">
           <h3>Travel &amp; Destination Coverage</h3>
-          <p>Based in <strong>Houston, TX</strong> — also serving Dallas, Austin, and California. All package prices cover time on-site only. <strong>Transportation, lodging, and travel costs are not included</strong> and are quoted separately before anything is confirmed.</p>
+          <p>Based in <strong>Houston, TX</strong> — available for events across Texas and beyond. Package rates cover on-site coverage only. Any travel outside the Houston area is quoted upfront, itemized, and confirmed in writing before your booking is locked in.</p>
           <div class="logistics-items">
             <div class="logistics-item">
               <strong>Houston Area (Local)</strong>
-              <span>First 60 miles round-trip from Houston included at no extra charge. Standard mileage rate applies beyond that radius.</span>
+              <span>Events within 30 miles of central Houston are covered at no extra charge — that's the full 60-mile round trip included. Simple.</span>
             </div>
             <div class="logistics-item">
-              <strong>Dallas · Austin · Out of Town</strong>
-              <span>Mileage or airfare + lodging billed at actual cost with receipts. Fully quoted and agreed upon before booking is locked in — no surprises.</span>
+              <strong>Outside Home City</strong>
+              <span>A travel supplement applies for events beyond the Houston area. Everything is itemized and agreed upon in writing before any deposit is made — no surprises, ever.</span>
             </div>
             <div class="logistics-item">
               <strong>Destination &amp; International</strong>
-              <span>Available on request. Full transparent travel package quoted before anything is signed.</span>
+              <span>Available on request. A full travel quote is provided upfront and confirmed before anything is signed.</span>
             </div>
           </div>
         </div>
@@ -628,6 +741,139 @@
               <strong>Authentic Deliverable Promise</strong>
               <span>We deliver every usable clip captured during your contracted hours. What you get depends on the flow of your day — we never promise an arbitrary number quota.</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INQUIRY FORM -->
+    <section class="section" id="inquire">
+      <div class="container">
+        <div class="form-wrap">
+          <div class="form-head">
+            <span class="eyebrow">Inquire</span>
+            <h2>Tell us about your event.</h2>
+            <p>Wedding, Mehndi, Sangeet, gala, corporate launch, brand activation — share the details and we'll get back within 24 hours.</p>
+          </div>
+
+          <form class="inquiry-form" id="inquiry-form" onsubmit="return submitInquiry(event)">
+            <div class="form-row cols-2">
+              <div class="field">
+                <label for="f-name">Your name <span class="req">*</span></label>
+                <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Priya Patel">
+              </div>
+              <div class="field">
+                <label for="f-email">Email <span class="req">*</span></label>
+                <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+              </div>
+            </div>
+
+            <div class="form-row cols-2">
+              <div class="field">
+                <label for="f-phone">Phone <span class="req">*</span></label>
+                <input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(555) 555-5555">
+              </div>
+              <div class="field">
+                <label for="f-date">Event date <span class="req">*</span></label>
+                <input id="f-date" name="date" type="date" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-occasion">What's the occasion? <span class="req">*</span></label>
+              <select id="f-occasion" name="occasion" required onchange="toggleWeddingFields()">
+                <option value="">Select event type…</option>
+                <optgroup label="Weddings">
+                  <option value="Wedding">Wedding</option>
+                  <option value="Reception">Reception</option>
+                  <option value="Engagement">Engagement</option>
+                  <option value="Bridal Shower">Bridal Shower</option>
+                  <option value="Multi-day wedding (multiple events)">Multi-day wedding (multiple events)</option>
+                </optgroup>
+                <optgroup label="South Asian ceremonies">
+                  <option value="Mehndi">Mehndi</option>
+                  <option value="Sangeet">Sangeet</option>
+                  <option value="Haldi">Haldi</option>
+                </optgroup>
+                <optgroup label="Corporate &amp; brand">
+                  <option value="Gala / Fundraiser">Gala / Fundraiser</option>
+                  <option value="Corporate event">Corporate event</option>
+                  <option value="Brand launch / activation">Brand launch / activation</option>
+                  <option value="Product launch">Product launch</option>
+                  <option value="Conference / Summit">Conference / Summit</option>
+                </optgroup>
+                <optgroup label="Private &amp; milestone">
+                  <option value="Milestone birthday (30/40/50/60+)">Milestone birthday (30/40/50/60+)</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Private party">Private party</option>
+                  <option value="Other">Other</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="wedding-only" id="wedding-fields">
+              <div class="field">
+                <label for="f-bride">Bride's name</label>
+                <input id="f-bride" name="bride" type="text" placeholder="Bride's name">
+              </div>
+              <div class="field">
+                <label for="f-groom">Groom's name</label>
+                <input id="f-groom" name="groom" type="text" placeholder="Groom's name">
+              </div>
+            </div>
+
+            <div class="form-row cols-2">
+              <div class="field">
+                <label for="f-guests">Number of guests</label>
+                <input id="f-guests" name="guests" type="number" min="1" placeholder="150">
+              </div>
+              <div class="field">
+                <label for="f-market">Market</label>
+                <select id="f-market" name="market">
+                  <option value="Texas">Texas</option>
+                  <option value="California">California</option>
+                  <option value="Destination / Other">Destination / Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-venue">Venue (if booked)</label>
+              <input id="f-venue" name="venue" type="text" placeholder="The Grand at Houston / TBD">
+            </div>
+
+            <div class="field">
+              <label for="f-package">Which package interests you?</label>
+              <select id="f-package" name="package">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Core">Core</option>
+                <option value="Cinematic">Cinematic</option>
+                <option value="Paparazzi">Paparazzi</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-source">How did you hear about us?</label>
+              <input id="f-source" name="source" type="text" placeholder="Instagram, friend, planner, Google…">
+            </div>
+
+            <div class="field">
+              <label for="f-message">Anything else we should know?</label>
+              <textarea id="f-message" name="message" placeholder="Tell us about your vision, your timeline, any specific moments you want captured…"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Send inquiry
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <p class="form-meta">We respond within 24 hours · entropystudioz@gmail.com</p>
+          </form>
+
+          <div class="form-success" id="form-success">
+            <h3>Inquiry sent. 🎉</h3>
+            <p>Your email client should have opened. If not, write us directly at <strong>entropystudioz@gmail.com</strong>. We'll respond within 24 hours.</p>
           </div>
         </div>
       </div>
@@ -667,6 +913,76 @@
         document.getElementById(p+'-badge-tx').style.display=isCa?'none':'';
         document.getElementById(p+'-badge-ca').style.display=isCa?'':'none';
       });
+      // Sync inquiry form market dropdown
+      const fm = document.getElementById('f-market');
+      if (fm) fm.value = isCa ? 'California' : 'Texas';
+    }
+
+    /* ═══════ START HERE MODAL ═══════ */
+    function openStart(){
+      const m = document.getElementById('start-modal');
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeStart(){
+      const m = document.getElementById('start-modal');
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // ESC closes modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeStart();
+    });
+
+    /* ═══════ CONDITIONAL WEDDING FIELDS ═══════ */
+    function toggleWeddingFields(){
+      const sel = document.getElementById('f-occasion').value;
+      const block = document.getElementById('wedding-fields');
+      const isWedding = sel === 'Wedding' || sel === 'Engagement' || sel === 'Multi-day wedding (multiple events)' || sel === 'Reception';
+      block.classList.toggle('show', isWedding);
+    }
+
+    /* ═══════ INQUIRY FORM SUBMIT ═══════ */
+    function submitInquiry(event){
+      event.preventDefault();
+      const form = document.getElementById('inquiry-form');
+      const data = Object.fromEntries(new FormData(form));
+      // Backup to localStorage (so nothing lost if mailto fails)
+      try {
+        const inquiries = JSON.parse(localStorage.getItem('socialvows_inquiries') || '[]');
+        inquiries.push({ ...data, submitted_at: new Date().toISOString() });
+        localStorage.setItem('socialvows_inquiries', JSON.stringify(inquiries));
+      } catch(e) { /* fail silently */ }
+
+      // Build email
+      const subject = `[Social Vows Inquiry] ${data.occasion || 'Event'} — ${data.date || 'date TBD'} — ${data.name}`;
+      const lines = [
+        `New inquiry from Social Vows site:`,
+        ``,
+        `Name: ${data.name}`,
+        `Email: ${data.email}`,
+        `Phone: ${data.phone}`,
+        `Event date: ${data.date}`,
+        `Occasion: ${data.occasion}`,
+        data.bride ? `Bride: ${data.bride}` : null,
+        data.groom ? `Groom: ${data.groom}` : null,
+        data.guests ? `Guests: ${data.guests}` : null,
+        `Market: ${data.market || 'Not specified'}`,
+        data.venue ? `Venue: ${data.venue}` : null,
+        `Package interest: ${data.package || 'Not specified'}`,
+        data.source ? `Source: ${data.source}` : null,
+        ``,
+        `Message:`,
+        data.message || '(none)',
+      ].filter(Boolean).join('\n');
+
+      const mailto = `mailto:entropystudioz@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+      window.location.href = mailto;
+
+      // Show success state
+      form.style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+      return false;
     }
   </script>
 </body>
